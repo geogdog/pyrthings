@@ -1,4 +1,5 @@
 '''A set of random things.'''
+from __future__ import print_function
 import random
 
 def random_mac():
@@ -26,3 +27,8 @@ def random_ports(port_prefix='eth', amount=5):
         if port != None:
             ports_to_create.append(port_prefix + str(port))
     return ports_to_create
+
+if __name__ == '__main__':
+    print('Random MAC: %s' % random_mac())
+    print('Random Asset Tag: %s' % random_asset_tag())
+    print('Random Ports: %s' % ' ,'.join(random_ports()))
