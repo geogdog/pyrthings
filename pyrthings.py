@@ -3,7 +3,7 @@ from __future__ import print_function
 import random
 
 def random_mac():
-    '''Create a random MAC address'''
+    '''Create a random MAC address.'''
     mac = [ random.randint(0x00, 0xff),
             random.randint(0x00, 0xff),
             random.randint(0x00, 0xff),
@@ -13,7 +13,7 @@ def random_mac():
     return ':'.join(['%02x' % m for m in mac])
 
 def random_asset_tag():
-    '''Create a random, zero padded, 6 digit number'''
+    '''Create a random, zero padded, 6 digit number.'''
     return ('%06d' % random.randint(1, 999999))
 
 def random_ports(port_prefix='eth', amount=5):
