@@ -14,7 +14,7 @@ def random_mac():
 
 def random_asset_tag():
     '''Create a random, zero padded, 6 digit number.'''
-    return ('%06d' % random.randint(1, 999999))
+    return '{0:06d}'.format(random.randint(1, 999999))
 
 def random_ports(port_prefix='eth', amount=5):
     '''create a random amount of ethernet port names between 2 and option,
